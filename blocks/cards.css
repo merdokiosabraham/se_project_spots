@@ -17,4 +17,8 @@
   .cards {
     width: 288px;
   }
+
+  .cards__list {
+    display: table-row;
+  }
 }

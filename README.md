@@ -1,41 +1,33 @@
-**Spots**
+# Spots
 
-Description:
+## Description:
 
 Spots is a web application that showcases various locations with images and descriptions. Users can view different spots, like them, and create new posts.
 
-Technologies Used:
+### User Profile:
 
-This project is built using:
-HTML5
-CSS3
-
-User Profile:
 Displays a user profile with an avatar, name, and description.
-Image Gallery:
+
+### Image Gallery:
+
 Showcases a list of spots with images and titles.
-Like Button:
+
+### Like Button:
+
 Allows users to like their favorite spots (future functionality).
-Add New Post:
+
+### Add New Post:
+
 Button to add a new post (future functionality).
 
-creenshots
+## Technologies Used:
 
-![Val Thorens](1-photo-by-moritz-feldmann-from-pexels-1.jpg)
+This project is built using;
 
-![Restaurant Terrace](2-photo-by-ceiline-from-pexels-1.jpg)
+HTML5, CSS3
 
-![Cafe](3-photo-by-tubanur-dogan-from-pexels.jpg)
+## Screenshots
 
-![Bridge](4-photo-by-maurice-laschet-from-pexels.jpg)
+## Deployment:
 
-![Tunnel](5-photo-by-van-anh-nguyen-from-pexels.jpg)
-
-![Mountain House](6-photo-by-moritz-feldmann-from-pexels.jpg)
-
-Deployment
 You can access the deployed project here: https://github.com/merdokiosabraham/se_project_spots
-
-Figma
-
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)

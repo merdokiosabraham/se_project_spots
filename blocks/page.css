@@ -6,13 +6,4 @@
 .page__section {
   max-width: 1280px;
   margin: 0 auto;
-  /* flex-direction: column; */
-  /* text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; */
 }
-
-/* * {
-  outline: thin solid red;
-  visibility: visible;
-} */

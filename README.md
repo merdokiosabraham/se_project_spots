@@ -34,4 +34,4 @@ HTML5, CSS3
 
 ## Deployment:
 
-You can access the deployed project here: https://github.com/merdokiosabraham/se_project_spots
+You can access the deployed project here: https://merdokiosabraham.github.io/se_project_spots/

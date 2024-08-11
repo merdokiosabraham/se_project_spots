@@ -1,0 +1,129 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__avatar {
+  width: 190px;
+  height: 190px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  min-height: 190px;
+  align-items: start;
+}
+
+.profile__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 213px;
+}
+
+.profile__description {
+  margin-bottom: 32px;
+  margin: 0;
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #212121;
+  opacity: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 213px;
+}
+
+.profile__edit-btn {
+  /* margin-bottom: 20px; */
+  height: 16px;
+  border: none;
+  opacity: 70%;
+  border-radius: 90px;
+  font-weight: 500;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 100%;
+  gap: 8px;
+  margin-top: auto;
+  padding: 0;
+  display: flex;
+}
+
+.profile__edit-btn:hover {
+  cursor: pointer;
+}
+
+.profile__add-btn {
+  margin: 0;
+  border-radius: 8px;
+  width: 149px;
+  height: 52px;
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  margin-left: auto;
+  align-self: end;
+}
+
+.profile__add-btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+  }
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
+  }
+  .profile__name {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  .profile__description {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 32px;
+  }
+
+  .profile__edit-btn {
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    margin-top: 32px;
+  }
+
+  .profile__add-btn {
+    margin: 20px auto 20px;
+    width: 288px;
+    height: 52px;
+  }
+  .profile__column {
+    align-items: center;
+  }
+}

@@ -35,3 +35,5 @@ HTML5, CSS3
 ## Deployment:
 
 You can access the deployed project here: https://merdokiosabraham.github.io/se_project_spots/
+
+You can access the Project overview video here: https://drive.google.com/file/d/1vKOBx1djpyp5lDTjw936hpSW7B6aBwZq/view?usp=drivesdk

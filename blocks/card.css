@@ -18,7 +18,8 @@
 }
 
 .card__title {
-  margin-bottom: 36px;
+  margin-bottom: 0;
+  margin-top: 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -30,17 +31,18 @@
 
 .card__like-btn {
   width: 23px;
+  margin-top: 0;
   height: 20px;
   color: #212121;
   opacity: 40%;
   border: none;
   background-image: url(../images/heart.svg);
-  margin-top: 20px;
   background-color: transparent;
 }
 
 .card__like-btn:hover {
   cursor: pointer;
+  opacity: 100;
 }
 
 @media screen and (max-width: 630px) {
@@ -53,5 +55,9 @@
   }
   .card__title {
     font-size: 16px;
+  }
+
+  .card__content {
+    margin-bottom: 20px;
   }
 }

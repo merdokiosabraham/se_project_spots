@@ -93,6 +93,21 @@
       <footer class="footer">
         <h2 class="footer__title">2024 &copy; Spot</h2>
       </footer>
+      <div class="modal">
+        <div class="modal__container">
+          <button type="submit" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form name="edit-profile" class="modal__form"></form>
+          <label for="name" class="modal__label">
+            Name
+            <input id="name" type="text" class="modal__input" />
+            <label for="name" class="modal__label">
+              Description
+              <input id="description" type="text" class="modal__input" />
+            </label>
+            <button type="submit" class="modal__submit-btn"></button>
+        </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>

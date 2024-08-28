@@ -95,17 +95,31 @@
       </footer>
       <div class="modal" id="edit-modal">
         <div class="modal__container">
-          <button type="submit" class="modal__close-btn"><img src="./images/Group 27.png" alt="" class="url"></button>
+          <button type="submit" class="modal__close-btn">
+            <img src="./images/Group 27.png" alt="" class="url" />
+          </button>
           <h2 class="modal__title">Edit profile</h2>
-          <form name="edit-profile" class="modal__form"></form>
-          <label for="name" class="modal__label">
-            Name
-            <input id="name" type="text" class="modal__input" placeholder="Type your name"/>
-            <label for="name" class="modal__label">
+          <form name="edit-profile" class="modal__form">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+              />
+            </label>
+            <label for="profile-description-input" class="modal__label">
               Description
-              <input id="description" type="text" class="modal__input" placeholder="Describe yourself"/>
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
         </div>
       </div>
     </div>

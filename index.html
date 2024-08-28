@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="-----" />
     <meta name="author" content="Marcus Abraham" />
     <meta name="keywords" content="-----" />
@@ -31,62 +31,7 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/pexels-kassandre-pedro-8639743 1.png"
-                alt="Val Thorens"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/restaurant.svg"
-                alt="Restaurant terrace"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/cafe.svg"
-                alt="An outdoor cafe"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./images/bridge.svg" alt="Bridge" class="card__image" />
-              <div class="card__content">
-                <h2 class="card__title">
-                  A very long bridge, over the forest...
-                </h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./images/tunnel.svg" alt="Tunnel" class="card__image" />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./images/cabin.svg" alt="Cabin" class="card__image" />
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
+            <!-- Cards will be dynamically generated here -->
           </ul>
         </section>
       </main>
@@ -122,6 +67,15 @@
           </form>
         </div>
       </div>
+      <template id="card-template">
+        <li class="card">
+          <img src="" alt="" class="card__image" />
+          <div class="card__content">
+            <h2 class="card__title"></h2>
+            <button type="button" class="card__like-btn"></button>
+          </div>
+        </li>
+      </template>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>

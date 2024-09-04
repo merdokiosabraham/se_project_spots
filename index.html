@@ -38,6 +38,7 @@
       <footer class="footer">
         <h2 class="footer__title">2024 &copy; Spot</h2>
       </footer>
+
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="submit" class="modal__close-btn">
@@ -67,6 +68,40 @@
           </form>
         </div>
       </div>
+
+      <div class="modal" id="add-card-modal">
+        <div class="modal__content">
+          <!-- <button type="button" class="modal__close-btn"> -->
+          <!-- <img src="./images/Group 27.png" alt="" />
+          </button> -->
+          <h3 class="modal__title">New Post</h3>
+          <form id="add-card-form" class="modal__form">
+            <label for="add-card-link-input" class="modal__label">
+              Image link
+              <input
+                id="add-card-name-input"
+                type="url"
+                class="modal__input"
+                name="link"
+                placeholder="Paste a link to the picture"
+                required
+              />
+            </label>
+            <label for="add-card-name-input" class="modal__label">
+              Caption
+              <input
+                id="add-card-name-input"
+                type="url"
+                class="modal__input"
+                placeholder="Type your caption"
+                name="name"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
       <template id="card-template">
         <li class="card">
           <img src="" alt="" class="card__image" />

@@ -93,6 +93,19 @@
   cursor: pointer;
 }
 
+.modal__button {
+  font-size: 16px;
+  line-height: 1;
+  color: #fcf5e5;
+  width: 100%;
+  max-width: 156px;
+  padding: 18px 0;
+  background: #212121;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 630px) {
   .modal {
     padding: 0 20px;

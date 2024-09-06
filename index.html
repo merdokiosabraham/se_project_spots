@@ -39,9 +39,10 @@
         <h2 class="footer__title">2024 &copy; Spot</h2>
       </footer>
 
+      <!-- Edit Profile Modal -->
       <div class="modal" id="edit-modal">
         <div class="modal__container">
-          <button type="submit" class="modal__close-btn">
+          <button type="button" class="modal__close-btn">
             <img src="./images/Group 27.png" alt="" class="url" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
@@ -69,17 +70,18 @@
         </div>
       </div>
 
+      <!-- Add New Post Modal -->
       <div class="modal" id="add-card-modal">
-        <div class="modal__content">
-          <!-- <button type="button" class="modal__close-btn"> -->
-          <!-- <img src="./images/Group 27.png" alt="" />
-          </button> -->
-          <h3 class="modal__title">New Post</h3>
-          <form id="add-card-form" class="modal__form">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Group 27.png" alt="" />
+          </button>
+          <h2 class="modal__title">New Post</h2>
+          <form name="add-card" class="modal__form">
             <label for="add-card-link-input" class="modal__label">
               Image link
               <input
-                id="add-card-name-input"
+                id="add-card-link-input"
                 type="url"
                 class="modal__input"
                 name="link"
@@ -87,14 +89,15 @@
                 required
               />
             </label>
-            <label for="add-card-name-input" class="modal__label">
+            <label for="add-card-caption-input" class="modal__label">
               Caption
               <input
-                id="add-card-name-input"
-                type="url"
+                id="add-card-caption-input"
+                type="text"
                 class="modal__input"
                 placeholder="Type your caption"
                 name="name"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>

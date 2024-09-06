@@ -45,6 +45,26 @@
   opacity: 100;
 }
 
+.card__like-btn_liked {
+  background-image: url("../images/likebtn.png");
+}
+
+.card__delete-btn {
+  background-image: url("../images/trash.png"); /* Replace with your delete icon */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.card__delete-btn:hover {
+  opacity: 0.7; /* Optional hover effect */
+}
+
 @media screen and (max-width: 630px) {
   .card {
     max-width: 288px;

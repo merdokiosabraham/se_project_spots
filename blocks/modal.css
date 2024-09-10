@@ -26,9 +26,9 @@
 
 .modal__container {
   background: white;
-  max-width: 630px;
+  max-width: 730px;
   width: 100%;
-  height: 408px;
+  /* height: 408px; */
   padding: 32px 50px;
   position: relative;
   box-sizing: border-box;
@@ -107,9 +107,23 @@
 }
 
 .modal__preview-image {
-  max-width: 80vw;
-  max-height: 80vh;
   object-fit: cover;
+  max-width: 90vw; /* Ensure the image doesn't overflow the modal */
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto; /
+}
+
+.modal__container_type_preview {
+  padding: 0;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: none;
+  height: 100%; /* Make sure the modal takes full height */
 }
 
 @media screen and (max-width: 630px) {
@@ -142,9 +156,9 @@
     margin-bottom: 24px;
   }
 
-  .modal__label {
+  /* .modal__label {
     /* margin-bottom: 24px; */
-  }
+  /* } */
 
   .modal__submit-btn {
     width: 100%;

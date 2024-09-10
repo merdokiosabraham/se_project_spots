@@ -23,6 +23,10 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Landscape View",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
@@ -47,6 +51,14 @@ const cardLinkInput = document.querySelector("#add-card-link-input");
 
 const cardTemplate = document.querySelector("#card-template").content;
 const cardsList = document.querySelector(".cards__list");
+
+// Image Preview Modal Elements
+const imagePreviewModal = document.querySelector("#image-preview-modal");
+const imagePreviewElement = imagePreviewModal.querySelector(
+  ".modal__preview-image"
+);
+const imagePreviewCloseBtn =
+  imagePreviewModal.querySelector(".modal__close-btn");
 
 // Function to open any modal
 function openModal(modal) {
@@ -99,9 +111,22 @@ editFormElement.addEventListener("submit", (evt) => {
   closeModal(editModal);
 });
 
+// Function to open the image preview modal
+function openImagePreview(src, alt) {
+  imagePreviewElement.src = src;
+  imagePreviewElement.alt = alt;
+  // imagePreviewCaption.textContent = alt;
+  openModal(imagePreviewModal);
+}
+
+// Close image preview modal
+imagePreviewCloseBtn.addEventListener("click", () => {
+  closeModal(imagePreviewModal);
+});
+
 // Function to create a new card element
 function getCardElement(data) {
-  const cardElement = cardTemplate.cloneNode(true);
+  const cardElement = cardTemplate.cloneNode(true).querySelector(".card");
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__like-btn");
@@ -113,12 +138,17 @@ function getCardElement(data) {
 
   // Like button functionality
   likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("card__like-btn_active");
+    likeButton.classList.toggle("card__like-btn_liked");
   });
 
   // Delete button functionality
   deleteButton.addEventListener("click", () => {
     cardElement.remove();
+  });
+
+  // Add event listener to open image preview modal
+  cardImage.addEventListener("click", () => {
+    openImagePreview(data.link, data.name);
   });
 
   return cardElement;

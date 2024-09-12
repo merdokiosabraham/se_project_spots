@@ -23,10 +23,6 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-  {
-    name: "Landscape View",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
-  },
 ];
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
@@ -54,6 +50,9 @@ const cardsList = document.querySelector(".cards__list");
 
 // Image Preview Modal Elements
 const imagePreviewModal = document.querySelector("#image-preview-modal");
+const imagePreviewCaption = imagePreviewModal.querySelector(
+  ".modal__preview-caption"
+);
 const imagePreviewElement = imagePreviewModal.querySelector(
   ".modal__preview-image"
 );
@@ -115,7 +114,7 @@ editFormElement.addEventListener("submit", (evt) => {
 function openImagePreview(src, alt) {
   imagePreviewElement.src = src;
   imagePreviewElement.alt = alt;
-  // imagePreviewCaption.textContent = alt;
+  imagePreviewCaption.textContent = alt;
   openModal(imagePreviewModal);
 }
 

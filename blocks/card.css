@@ -52,30 +52,33 @@
 }
 
 .card__delete-btn {
-  background-image: url("../images/trash.png"); /* Replace with your delete icon */
-  background-color: transparent;
-  border: none;
+  background-image: url(../images/trashcan.svg);
+  background-color: #0000004d;
+  border-radius: 100%;
   cursor: url(../images/Layer\ 1\ 5.png);
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  background-size: cover;
+  width: 32px;
+  height: 32px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  border: none;
   background-position: center;
-  width: 12px;
-  height: 15px;
 }
 
 .card__delete-btn:hover {
-  opacity: 0.7;
-  background-image: url(../images/delete.hover.png);
-  width: 32px;
-  height: 32px;
-  top: 10px;
-  left: 371px;
+  /* opacity: 0.7; */
+  background-image: url(../images/trashcan.svg);
+  /* width: 32px;
+  height: 32px; */
+  /* top: 10px;
+  left: 371px; */
   cursor: pointer;
+  /* background-size: 15px; */
+  background-color: #ff6565;
+  /* position: absolute; */
+  /* align-items: center; */
 }
 
 @media screen and (max-width: 630px) {

@@ -52,11 +52,10 @@
   border: 2px;
   background-color: transparent;
   /* color: white; */
-  top: 16px;
-  right: 16px;
+  top: 0;
+  right: -200px;
   width: 40px;
   height: 40px;
-  opacity: 40%;
   font-size: 24px; /* Increase for better visibility */
   cursor: pointer;
   z-index: 10;
@@ -90,7 +89,7 @@
 }
 
 .modal__submit-btn {
-  width: 100%;
+  width: 156px;
   height: 52px;
   border-radius: 8px;
   padding: 18px 0;
@@ -124,7 +123,7 @@
 .modal__preview-caption {
   position: absolute;
   margin: 0;
-  bottom: 5vh;
+  bottom: 0;
   translate: 0 calc(100% + 8px);
   border-radius: 8px;
   left: 0;
@@ -145,8 +144,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
-  max-width: 730px;
+  /* height: 100%; */
+  /* max-width: 730px; */
   margin: 0 auto;
 }
 
@@ -167,11 +166,13 @@
   .modal__title {
     font-size: 20px;
     margin: 12px 12px 24px 0;
+    display: flex;
+    position: relative;
   }
 
   .modal__close-btn {
-    top: 12px;
-    right: 12px;
+    top: -40px;
+    right: 10px;
     border: none;
     background-color: transparent;
   }

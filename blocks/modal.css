@@ -52,6 +52,20 @@
   border: none;
   background-color: transparent;
   /* color: white; */
+  top: 20px;
+  right: 45px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px; /* Increase for better visibility */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal__container_type_preview .modal__close-btn {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  /* color: white; */
   top: 4px;
   right: -60px;
   width: 40px;
@@ -172,7 +186,7 @@
   }
 
   .modal__close-btn {
-    top: -40px;
+    top: 19px;
     right: 10px;
     border: none;
     background-color: transparent;
@@ -189,8 +203,7 @@
 
   .modal__preview-caption {
     position: absolute;
-    /* bottom: auto; */
-    /* left: 0; */
+    left: 70px;
     width: auto;
     padding: 8px;
     background-color: black;
@@ -208,5 +221,12 @@
     flex-direction: column;
     justify-content: flex;
     align-items: center;
+  }
+
+  .modal__container_type_preview .modal__close-btn {
+    top: -20px;
+    right: 70px;
+    border: none;
+    background-color: transparent;
   }
 }

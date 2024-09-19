@@ -49,14 +49,14 @@
 
 .modal__close-btn {
   position: absolute;
-  border: 2px;
+  border: none;
   background-color: transparent;
   /* color: white; */
-  top: 0;
-  right: -200px;
+  top: 4px;
+  right: -60px;
   width: 40px;
   height: 40px;
-  font-size: 24px; /* Increase for better visibility */
+  font-size: 30px; /* Increase for better visibility */
   cursor: pointer;
   z-index: 10;
 }
@@ -117,7 +117,7 @@
   object-fit: contain;
   display: block;
   margin: 0;
-  /* margin: auto; */
+  border-radius: 8px;
 }
 
 .modal__preview-caption {
@@ -144,6 +144,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: unset;
   /* height: 100%; */
   /* max-width: 730px; */
   margin: 0 auto;

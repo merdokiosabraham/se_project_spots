@@ -203,7 +203,7 @@
 
   .modal__preview-caption {
     position: absolute;
-    left: 70px;
+    left: 0px;
     width: auto;
     padding: 8px;
     background-color: black;
@@ -224,8 +224,8 @@
   }
 
   .modal__container_type_preview .modal__close-btn {
-    top: -20px;
-    right: 70px;
+    top: -32px;
+    right: -7px;
     border: none;
     background-color: transparent;
   }

@@ -61,12 +61,12 @@
   z-index: 10;
 }
 
-.modal__container_type_preview .modal__close-btn {
+.modal__preview-container .modal__close-btn {
   position: absolute;
   border: none;
   background-color: transparent;
   /* color: white; */
-  top: 4px;
+  top: 0;
   right: -60px;
   width: 40px;
   height: 40px;
@@ -126,8 +126,8 @@
 }
 
 .modal__preview-image {
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 80vw;
+  max-height: 80vh;
   object-fit: contain;
   display: block;
   margin: 0;
@@ -151,20 +151,11 @@
   box-sizing: border-box;
 }
 
-.modal__container_type_preview {
+.modal__preview-container {
   position: relative;
-  padding: 0;
-  background: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: unset;
-  /* height: 100%; */
-  /* max-width: 730px; */
-  margin: 0 auto;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 750px) {
   .modal {
     padding: 0 16px;
     box-sizing: border-box;
@@ -213,18 +204,8 @@
     display: flex;
   }
 
-  .modal__container_type_preview {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 16px;
-    flex-direction: column;
-    justify-content: flex;
-    align-items: center;
-  }
-
-  .modal__container_type_preview .modal__close-btn {
-    top: -32px;
+  .modal__preview-container .modal__close-btn {
+    top: -45px;
     right: -7px;
     border: none;
     background-color: transparent;

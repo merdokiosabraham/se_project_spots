@@ -69,6 +69,17 @@ function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
 
+// Close modal with Escape key
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    if (openedModal) closeModal(openedModal);
+  }
+}
+
+// Add event listener to close modal on Escape key press
+document.addEventListener("keydown", handleEscapeKey);
+
 // Edit profile modal functions
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;

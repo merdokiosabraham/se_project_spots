@@ -62,28 +62,40 @@ const imagePreviewCloseBtn =
 // Function to open any modal
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  // Add event listener to close modal on Escape key press
+  document.addEventListener("keydown", handleEscapeKey);
+  modal.addEventListener("click", handleOverlayClick);
 }
 
 // Function to close any modal
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscapeKey);
+  modal.removeEventListener("click", handleOverlayClick);
 }
 
 // Close modal with Escape key
 function handleEscapeKey(evt) {
+  console.log("handleEscape has run!");
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
     if (openedModal) closeModal(openedModal);
   }
 }
 
-// Add event listener to close modal on Escape key press
-document.addEventListener("keydown", handleEscapeKey);
+function handleOverlayClick(evt) {
+  console.log(evt.target);
+  if (evt.target.classList.contains("modal")) {
+    //const openedModal = document.querySelector(".modal_opened");
+    closeModal(evt.target);
+  }
+}
 
 // Edit profile modal functions
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editFormElement, config);
   openModal(editModal);
 });
 

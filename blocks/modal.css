@@ -155,6 +155,11 @@
   transition: 0.3s;
 }
 
+.modal__button_disabled {
+  background-color: black;
+  opacity: 50%;
+}
+
 .modal__preview-image {
   max-width: 80vw;
   max-height: 80vh;

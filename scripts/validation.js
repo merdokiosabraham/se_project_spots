@@ -68,12 +68,21 @@ const enableValidation = (config) => {
   });
 };
 
-// Calling enableValidation with configuration object
-enableValidation({
+const resetValidation = (formEl, config) => {
+  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  inputList.forEach((inputEl) => {
+    checkInputValidity(formEl, inputEl, config);
+  });
+};
+
+const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__button_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible",
-});
+};
+
+// Calling enableValidation with configuration object
+enableValidation(config);

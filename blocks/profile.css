@@ -34,7 +34,7 @@
 
 .profile__description {
   margin-bottom: 32px;
-  margin: 0;
+  /* margin: 0; */
   margin-top: 12px;
   font-weight: 500;
   font-size: 16px;
@@ -81,6 +81,11 @@
   line-height: 100%;
   margin-left: auto;
   align-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
 }
 
 .profile__add-btn:hover {

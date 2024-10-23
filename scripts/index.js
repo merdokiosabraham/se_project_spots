@@ -125,6 +125,26 @@ cardForm.addEventListener("submit", (evt) => {
   cardForm.reset(); // Reset the form fields
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const input1 = document.getElementById("input1");
+  const input2 = document.getElementById("input2");
+  const submitBtn = document.getElementById("submit-btn");
+
+  function checkInputs() {
+    if (input1.value.trim() === "" || input2.value.trim() === "") {
+      submitBtn.disabled = true;
+    } else {
+      submitBtn.disabled = false;
+    }
+  }
+
+  input1.addEventListener("input", checkInputs);
+  input2.addEventListener("input", checkInputs);
+
+  // Initial check
+  checkInputs();
+});
+
 // Handle form submission for editing profile
 editFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();

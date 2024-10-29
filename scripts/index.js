@@ -42,6 +42,7 @@ const editModalDescriptionInput = editModal.querySelector(
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
+const cardFormSubmitButton = cardModal.querySelector(".modal__submit-btn");
 const cardNameInput = document.querySelector("#add-card-caption-input");
 const cardLinkInput = document.querySelector("#add-card-link-input");
 
@@ -123,26 +124,11 @@ cardForm.addEventListener("submit", (evt) => {
   cardsList.prepend(cardElement); // Add new card to the top of the list
   closeModal(cardModal); // Close the modal after submission
   cardForm.reset(); // Reset the form fields
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const input1 = document.getElementById("input1");
-  const input2 = document.getElementById("input2");
-  const submitBtn = document.getElementById("submit-btn");
-
-  function checkInputs() {
-    if (input1.value.trim() === "" || input2.value.trim() === "") {
-      submitBtn.disabled = true;
-    } else {
-      submitBtn.disabled = false;
-    }
-  }
-
-  input1.addEventListener("input", checkInputs);
-  input2.addEventListener("input", checkInputs);
-
-  // Initial check
-  checkInputs();
+  toggleButtonState(
+    [cardNameInput, cardLinkInput],
+    cardFormSubmitButton,
+    config
+  );
 });
 
 // Handle form submission for editing profile

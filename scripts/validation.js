@@ -1,4 +1,3 @@
-// Function to show input error
 const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
@@ -6,7 +5,6 @@ const showInputError = (formEl, inputEl, errorMsg, config) => {
   inputEl.classList.add(config.inputErrorClass);
 };
 
-// Function to hide input error
 const hideInputError = (formEl, inputEl, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
@@ -14,7 +12,6 @@ const hideInputError = (formEl, inputEl, config) => {
   inputEl.classList.remove(config.inputErrorClass);
 };
 
-// Function to check input validity
 const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, inputEl.validationMessage, config);
@@ -23,47 +20,37 @@ const checkInputValidity = (formEl, inputEl, config) => {
   }
 };
 
-// Function to toggle the submit button based on input validity
 const toggleButtonState = (inputList, buttonElement, config) => {
   const hasInvalidInput = inputList.some((inputEl) => !inputEl.validity.valid);
   if (hasInvalidInput) {
     buttonElement.classList.add(config.inactiveButtonClass);
     buttonElement.disabled = true;
-    ``;
   } else {
     buttonElement.classList.remove(config.inactiveButtonClass);
     buttonElement.disabled = false;
   }
 };
 
-// Declare a resetValidation(formEl, inputList, config) menthod
-//   iterate through the inputList.forEach((inputEl) => {
-//  })
-//     call hideInputError for each input
-
-// Function to set event listeners on form inputs
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
-  toggleButtonState(inputList, buttonElement, config); // Set initial state
+  toggleButtonState(inputList, buttonElement, config);
 
   inputList.forEach((inputEl) => {
     inputEl.addEventListener("input", function () {
       checkInputValidity(formEl, inputEl, config);
-      toggleButtonState(inputList, buttonElement, config); // Check button state on each input
+      toggleButtonState(inputList, buttonElement, config);
     });
   });
 };
 
-// Function to enable validation for all forms
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formEl) => {
     formEl.addEventListener("submit", (evt) => {
-      evt.preventDefault(); // Prevent default form submission
+      evt.preventDefault();
     });
-
     setEventListeners(formEl, config);
   });
 };
@@ -84,5 +71,4 @@ const config = {
   errorClass: "modal__error_visible",
 };
 
-// Calling enableValidation with configuration object
-enableValidation(config);
+export { enableValidation, resetValidation, toggleButtonState, config };

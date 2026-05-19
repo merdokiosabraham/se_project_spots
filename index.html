@@ -17,11 +17,16 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/avatar.jpg"
-            alt="Profile Avatar"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <img
+              src="./images/avatar.jpg"
+              alt="Profile Avatar"
+              class="profile__avatar"
+            />
+            <button type="button" class="profile__avatar-btn">
+              <img src="./images/pencil.svg" alt="Edit avatar" />
+            </button>
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -140,6 +145,45 @@
         </div>
       </div>
 
+      <!-- Edit Avatar Modal -->
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Group 27.png" alt="Close button" />
+          </button>
+          <h2 class="modal__title">Change profile picture</h2>
+          <form name="edit-avatar" class="modal__form">
+            <label for="avatar-link-input" class="modal__label">
+              Image link
+              <input
+                id="avatar-link-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                required
+              />
+              <span id="avatar-link-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Delete Confirmation Modal -->
+      <div class="modal" id="delete-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Group 27.png" alt="Close button" />
+          </button>
+          <h2 class="modal__title">Are you sure?</h2>
+          <p class="modal__subtitle">This action cannot be undone.</p>
+          <form name="delete-card" class="modal__form">
+            <button type="submit" class="modal__submit-btn">Yes, delete</button>
+            <button type="button" class="modal__cancel-btn">Cancel</button>
+          </form>
+        </div>
+      </div>
+
       <template id="card-template">
         <li class="card">
           <img src="" alt="Post Image" class="card__image" />
@@ -151,9 +195,6 @@
         </li>
       </template>
     </div>
-
-    <!-- Scripts -->
-    <script defer src="./scripts/index.js"></script>
-    <script defer src="./scripts/validation.js"></script>
+    <script defer type="module" src="./scripts/index.js"></script>
   </body>
 </html>

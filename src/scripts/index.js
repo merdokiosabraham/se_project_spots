@@ -1,3 +1,4 @@
+import "../pages/index.css";
 import Api from "./Api.js";
 import { enableValidation, resetValidation, toggleButtonState, config } from "./validation.js";
 

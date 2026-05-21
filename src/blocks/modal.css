@@ -51,12 +51,11 @@
   position: absolute;
   border: none;
   background-color: transparent;
-  /* color: white; */
   top: 20px;
   right: 45px;
   width: 40px;
   height: 40px;
-  font-size: 30px; /* Increase for better visibility */
+  font-size: 30px;
   cursor: pointer;
   z-index: 10;
 }
@@ -65,20 +64,16 @@
   position: absolute;
   border: none;
   background-color: transparent;
-  /* color: white; */
   top: 0;
   right: -60px;
   width: 40px;
   height: 40px;
-  font-size: 30px; /* Increase for better visibility */
+  font-size: 30px;
   cursor: pointer;
   z-index: 10;
 }
 
 .modal__form {
-  width: 49px;
-  opacity: 0px;
-  gap: 32px;
   width: 100%;
   gap: 32px;
 }
@@ -99,7 +94,6 @@
   opacity: 40%;
   padding: 0 16px;
   box-sizing: border-box;
-  margin-bottom: 32px;
   margin: 8px 0 0;
   border: 1px solid #ccc;
 }
@@ -111,10 +105,6 @@
 
 .modal__input:hover {
   border: 1px solid rgb(33, 33, 33);
-}
-
-.modal__input_type_error {
-  border: 1px solid rgba(255, 0, 0, 0);
 }
 
 .modal__error {
@@ -140,6 +130,7 @@
   background-color: black;
   color: white;
   cursor: pointer;
+  border: none;
 }
 
 .modal__button {
@@ -158,6 +149,24 @@
 .modal__button_disabled {
   background-color: black;
   opacity: 50%;
+}
+
+.modal__cancel-btn {
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  padding: 18px 0;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-left: 16px;
+}
+
+.modal__subtitle {
+  font-size: 16px;
+  margin: 0 0 32px;
+  color: #212121;
 }
 
 .modal__preview-image {
@@ -225,6 +234,12 @@
 
   .modal__submit-btn {
     width: 100%;
+  }
+
+  .modal__cancel-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
   }
 
   .modal__preview-caption {
